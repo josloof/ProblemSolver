@@ -37,36 +37,32 @@
         android:background="#FFFFFF">
 
 
-
-
-
-
-
         <TextView
+
+            android:id="@+id/textView1"
 
             android:layout_width="fill_parent"
 
             android:layout_height="wrap_content"
 
-            android:inputType="number"
-
-            android:id="@+id/textView1"
-
             android:layout_alignParentTop="true"
 
             android:layout_centerHorizontal="true"
 
+            android:layout_span="4"
+
             android:background="@null"
+
+            android:cursorVisible="true"
 
             android:gravity="right"
 
-            android:layout_span="4"
+            android:inputType="number"
+
+            android:textColor="#000000"
 
             android:textSize="40dp"
-
-            android:typeface="monospace"
-
-            android:textColor="#000000" />
+            android:typeface="monospace" />
 
     </TableRow>
 
