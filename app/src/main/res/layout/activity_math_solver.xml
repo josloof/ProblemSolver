@@ -24,9 +24,9 @@
 
     <TableRow
 
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
 
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
 
         android:layout_weight="37.5"
 
@@ -34,14 +34,13 @@
 
         android:gravity="center_horizontal">
 
+        <TextView
 
-        <EditText
-
-            android:id="@+id/editText1"
+            android:id="@+id/textView"
 
             android:layout_width="fill_parent"
 
-            android:layout_height="match_parent"
+            android:layout_height="217dp"
 
             android:layout_alignParentTop="true"
 
@@ -51,19 +50,20 @@
 
             android:background="@null"
 
-            android:gravity="right"
+            android:cursorVisible="true"
 
-            android:hint="Formula 1"
+            android:gravity="right"
 
             android:inputType="number"
 
             android:textColor="#000000"
+
             android:textSize="40dp"
-            android:digits="@string/accepted_values"
-            android:typeface="monospace" />
+            android:typeface="monospace"/>
 
 
     </TableRow>
+
     <TableRow
 
         android:layout_width="fill_parent"
@@ -74,39 +74,7 @@
 
         android:background="#FFFFFF"
 
-        android:gravity="center_horizontal">
-
-
-        <EditText
-
-            android:id="@+id/editText2"
-
-            android:layout_width="fill_parent"
-
-            android:layout_height="match_parent"
-
-            android:layout_alignParentTop="true"
-
-            android:layout_centerHorizontal="true"
-
-            android:layout_span="4"
-
-            android:background="@null"
-
-            android:gravity="right"
-
-            android:hint="Formula 2"
-
-            android:inputType="text"
-
-            android:textColor="#000000"
-
-            android:textSize="40dp"
-            android:digits="@string/accepted_values"
-            android:typeface="monospace" />
-
-
-    </TableRow>
+        android:gravity="center_horizontal"/>
 
     <!--     Row 2 Starts From Here -->
 
@@ -122,6 +90,31 @@
 
         android:gravity="center_horizontal">
 
+
+
+
+
+        <Button
+
+            android:id="@+id/buttonPercentage"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="fill_parent"
+
+            android:layout_marginRight="1dp"
+
+            android:layout_span="1"
+
+            android:background="#FF9800"
+
+            android:text="X"
+
+            android:textColor="#FFFFFF"
+
+            android:textSize="35dp"
+
+            android:typeface="monospace" />
 
         <Button
 
@@ -150,56 +143,12 @@
 
         <Button
 
-            android:id="@+id/buttonPercentage"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="fill_parent"
-
-            android:layout_marginRight="1dp"
-
-            android:layout_span="1"
-
-            android:background="#FF9800"
-
-            android:text="X"
-
-            android:textColor="#FFFFFF"
-
-            android:textSize="35dp"
-
-            android:typeface="monospace" />
-
-
-        <Button
-
-            android:id="@+id/buttonDivide"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="fill_parent"
-
-            android:layout_marginRight="1dp"
-
-            android:layout_span="1"
-
-            android:background="#607D8B"
-
-            android:text="/"
-
-            android:textColor="#FFFFFF"
-
-            android:textSize="35dp"
-
-            android:typeface="monospace" />
-
-        <Button
-
             android:id="@+id/buttonDelete"
 
             android:layout_width="wrap_content"
 
             android:layout_height="fill_parent"
+            android:layout_marginRight="1dp"
 
             android:layout_span="1"
 
@@ -214,7 +163,27 @@
             android:typeface="monospace"
 
             />
+        <Button
 
+            android:id="@+id/buttonMultiply"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="fill_parent"
+
+            android:layout_marginTop="1dp"
+
+            android:layout_span="1"
+
+            android:background="#607D8B"
+
+            android:text="*"
+
+            android:textColor="#FFFFFF"
+
+            android:textSize="35dp"
+
+            android:typeface="monospace" />
 
     </TableRow>
 
@@ -233,28 +202,7 @@
         >
 
 
-        <Button
 
-            android:id="@+id/button7"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="fill_parent"
-
-            android:layout_marginTop="1dp"
-
-            android:layout_marginRight="1dp"
-
-            android:layout_span="1"
-            android:background="#2196F3"
-
-            android:text="7"
-
-            android:textColor="#FFFFFF"
-
-            android:textSize="35dp"
-
-            android:typeface="monospace" />
 
         <Button
 
@@ -279,7 +227,28 @@
             android:textSize="35dp"
             android:typeface="monospace" />
 
+        <Button
 
+            android:id="@+id/button7"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="fill_parent"
+
+            android:layout_marginTop="1dp"
+
+            android:layout_marginRight="1dp"
+
+            android:layout_span="1"
+            android:background="#2196F3"
+
+            android:text="7"
+
+            android:textColor="#FFFFFF"
+
+            android:textSize="35dp"
+
+            android:typeface="monospace" />
         <Button
 
             android:id="@+id/button9"
@@ -537,10 +506,9 @@
 
             android:typeface="monospace" />
 
-
         <Button
 
-            android:id="@+id/buttonMultiply"
+            android:id="@+id/buttonLeftBracket"
 
             android:layout_width="wrap_content"
 
@@ -548,17 +516,19 @@
 
             android:layout_marginTop="1dp"
 
+
             android:layout_span="1"
 
             android:background="#607D8B"
 
-            android:text="*"
+            android:text="("
 
             android:textColor="#FFFFFF"
 
             android:textSize="35dp"
 
             android:typeface="monospace" />
+
 
 
     </TableRow>
@@ -626,29 +596,6 @@
             android:typeface="monospace" />
 
 
-        <Button
-
-            android:id="@+id/buttonMinusValue"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="fill_parent"
-
-            android:layout_marginTop="1dp"
-
-            android:layout_marginRight="1dp"
-
-            android:layout_span="1"
-
-            android:background="#2196F3"
-
-            android:text="+/-"
-
-            android:textColor="#FFFFFF"
-
-            android:textSize="35dp"
-
-            android:typeface="monospace" />
 
 
         <Button
@@ -660,6 +607,7 @@
             android:layout_height="fill_parent"
 
             android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
 
             android:layout_span="1"
 
@@ -674,6 +622,30 @@
             android:typeface="monospace"
 
             />
+
+        <Button
+
+            android:id="@+id/buttonRightBracket"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="fill_parent"
+
+            android:layout_marginTop="1dp"
+
+
+            android:layout_span="1"
+
+            android:background="#607D8B"
+
+            android:text=")"
+
+            android:textColor="#FFFFFF"
+
+            android:textSize="35dp"
+
+            android:typeface="monospace" />
+
 
 
     </TableRow>

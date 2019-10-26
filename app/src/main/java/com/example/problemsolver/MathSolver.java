@@ -17,7 +17,7 @@ public class MathSolver extends AppCompatActivity {
 
     TextView textView;
 
-    private Button clear, delete, variable, divide, add, subtract, multiply, equal, minusValue;
+    private Button clear, delete, variable, divide, add, subtract, multiply, equal, rightBracket, leftBracket, minusValue;
 
     private  Button one, two, three, four, five, six, seven, eight, nine, point, zero ;
 
@@ -67,6 +67,10 @@ public class MathSolver extends AppCompatActivity {
 
         equal = (Button)findViewById(R.id.buttonEqual);
 
+        rightBracket =(Button)findViewById(R.id.buttonRightBracket);
+
+        leftBracket =(Button)findViewById(R.id.buttonLeftBracket);
+
         minusValue = (Button)findViewById(R.id.buttonMinusValue);
 
 
@@ -107,7 +111,7 @@ public class MathSolver extends AppCompatActivity {
 
                 ans+="1";
 
-                editText1.setText(editText1.getText() + "1");
+                textView.setText(textView.getText() + "1");
 
 
 
@@ -290,14 +294,14 @@ public class MathSolver extends AppCompatActivity {
                 //This code block will run when the textView is not empty
                 if(!textView.getText().toString().isEmpty())
 
-                //only if the textView doesn't end with a '+', '-' , '*', '/' or '.', the user can tap the point button.
+                //only if the textView doesn't end with a '+', '-' , '*', '(',')' , '=' or '.', the user can tap the point button.
                 {
 
                     String s = textView.getText().toString();
 
                     char ch=s.charAt(s.length()-1);
 
-                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='/' && ch!='.')
+                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='(' && ch!=')'&& ch!='.'&& ch!='=')
 
                     {
 
@@ -437,8 +441,8 @@ public class MathSolver extends AppCompatActivity {
                     String s = textView.getText().toString();
 
                     char ch=s.charAt(s.length()-1);
-
-                    if(ch!='+' && ch!='-' && ch!='X' && ch!='*' && ch!='/' && ch!='.')
+                    //only if the textView doesn't end with a '+', '-' , '*'or '.', the user can tap the variable button.
+                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='.')
 
                     {
 
@@ -461,7 +465,7 @@ public class MathSolver extends AppCompatActivity {
         });
 
 
-
+        /*
         divide.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -491,6 +495,7 @@ public class MathSolver extends AppCompatActivity {
             }
 
         });
+        */
 
         add.setOnClickListener(new View.OnClickListener() {
 
@@ -506,7 +511,7 @@ public class MathSolver extends AppCompatActivity {
 
                     char ch=s.charAt(s.length()-1);
 
-                    if(ch!='+' && ch!='-' && ch!='*' && ch!='/' && ch!='.') {
+                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='(' && ch!='.'&& ch!='=') {
 
                         a.add(s.length()-1);
 
@@ -538,7 +543,7 @@ public class MathSolver extends AppCompatActivity {
 
                     char ch=s.charAt(s.length()-1);
 
-                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='/' && ch!='.') {
+                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='(' && ch!='.'&& ch!='=') {
 
                         a.add(s.length()-1);
 
@@ -570,7 +575,7 @@ public class MathSolver extends AppCompatActivity {
 
                     char ch=s.charAt(s.length()-1);
 
-                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='/' && ch!='.') {
+                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='(' && ch!='.'&& ch!='=') {
 
                         a.add(s.length()-1);
 
@@ -589,10 +594,97 @@ public class MathSolver extends AppCompatActivity {
             }
 
         });
+        equal.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+
+                if(!textView.getText().toString().isEmpty())
+
+                {
+
+                    String s = textView.getText().toString();
+
+                    char ch=s.charAt(s.length()-1);
+
+                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='(' && ch!='.'&& ch!='=') {
+
+                        a.add(s.length()-1);
+
+                        ans+="*";
+
+                        textView.setText(textView.getText() + "=");
+
+                    }
 
 
+                }
+
+            }
+
+        });
+
+        leftBracket.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+
+                if(!textView.getText().toString().isEmpty())
+
+                {
+
+                    String s = textView.getText().toString();
+
+                    char ch=s.charAt(s.length()-1);
+
+                    if(ch!='.') {
+
+                        a.add(s.length()-1);
+
+                        ans+="*";
+
+                        textView.setText(textView.getText() + "(");
+
+                    }
 
 
+                }
+
+            }
+
+        });
+        rightBracket.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+
+                if(!textView.getText().toString().isEmpty())
+
+                {
+
+                    String s = textView.getText().toString();
+
+                    char ch=s.charAt(s.length()-1);
+
+                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='(' && ch!='.'&& ch!='=') {
+
+                        a.add(s.length()-1);
+
+                        ans+="*";
+
+                        textView.setText(textView.getText() + ")");
+
+                    }
+
+
+                }
+
+            }
+
+        });
     }
 
 }
