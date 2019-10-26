@@ -21,7 +21,7 @@ public class MathSolver extends AppCompatActivity {
 
     private  Button one, two, three, four, five, six, seven, eight, nine, point, zero ;
 
-    private String ans="";
+    private String ans ="";
 
     ArrayList<Integer> a = new ArrayList<Integer>();
 
@@ -42,11 +42,12 @@ public class MathSolver extends AppCompatActivity {
 
 
 
+        textView= (TextView) findViewById(R.id.textView);
 
-
+        /*
         final EditText editText1= (EditText)findViewById(R.id.editText1);
         EditText editText2= (EditText)findViewById(R.id.editText2);
-
+        */
         //textView.setMovementMethod(new ScrollingMovementMethod());
 
         //textView.setSelected(true);
@@ -404,7 +405,7 @@ public class MathSolver extends AppCompatActivity {
 
         });
 
-
+        /*
         //button to multiply the textView with -1
         minusValue.setOnClickListener(new View.OnClickListener() {
 
@@ -425,7 +426,7 @@ public class MathSolver extends AppCompatActivity {
             }
 
         });
-
+        */
 
 
         variable.setOnClickListener(new View.OnClickListener() {
@@ -441,8 +442,8 @@ public class MathSolver extends AppCompatActivity {
                     String s = textView.getText().toString();
 
                     char ch=s.charAt(s.length()-1);
-                    //only if the textView doesn't end with a '+', '-' , '*'or '.', the user can tap the variable button.
-                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='.')
+                    //only if the textView doesn't end with a  '*', 'X'or '.', the user can tap the variable button.
+                    if( ch!='*' && ch!='.'&& ch!='X')
 
                     {
 
@@ -554,7 +555,14 @@ public class MathSolver extends AppCompatActivity {
                     }
 
                 }
+                else{
+                    ans+="-";
 
+
+
+                    textView.setText(textView.getText() + "-");
+
+                }
             }
 
         });
@@ -587,8 +595,6 @@ public class MathSolver extends AppCompatActivity {
 
 
 
-
-
                 }
 
             }
@@ -612,7 +618,7 @@ public class MathSolver extends AppCompatActivity {
 
                         a.add(s.length()-1);
 
-                        ans+="*";
+                        ans+="=";
 
                         textView.setText(textView.getText() + "=");
 
@@ -639,7 +645,7 @@ public class MathSolver extends AppCompatActivity {
 
                     char ch=s.charAt(s.length()-1);
 
-                    if(ch!='.') {
+                    if(ch!='.'&& ch!='(') {
 
                         a.add(s.length()-1);
 
@@ -651,7 +657,14 @@ public class MathSolver extends AppCompatActivity {
 
 
                 }
+                else{
+                    ans+="(";
 
+
+
+                    textView.setText(textView.getText() + "(");
+
+                }
             }
 
         });
