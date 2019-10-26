@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ProblemSolver</string>
+    <string name="accepted_values">0123456789()+-= X</string>
 </resources>

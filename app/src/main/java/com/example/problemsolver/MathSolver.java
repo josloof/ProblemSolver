@@ -44,7 +44,8 @@ public class MathSolver extends AppCompatActivity {
 
 
 
-        textView = (TextView)findViewById(R.id.textView1);
+        final EditText editText1= (EditText)findViewById(R.id.editText1);
+        EditText editText2= (EditText)findViewById(R.id.editText2);
 
         //textView.setMovementMethod(new ScrollingMovementMethod());
 
@@ -106,7 +107,7 @@ public class MathSolver extends AppCompatActivity {
 
                 ans+="1";
 
-                textView.setText(textView.getText() + "1");
+                editText1.setText(editText1.getText() + "1");
 
 
 
