@@ -1,5 +1,6 @@
 package com.example.problemsolver;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +35,8 @@ public class Calculator extends AppCompatActivity {
 
         setContentView(R.layout.activity_calculator);
 
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
 
         //a.add(0);

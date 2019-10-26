@@ -1,5 +1,6 @@
 package com.example.problemsolver;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,8 @@ import java.util.ArrayList;
 
 
 public class MathSolver extends AppCompatActivity {
+
+
 
     TextView textView;
 
@@ -35,7 +38,8 @@ public class MathSolver extends AppCompatActivity {
 
         setContentView(R.layout.activity_math_solver);
 
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
 
         //a.add(0);
