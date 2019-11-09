@@ -9,16 +9,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
+import android.view.Menu;
 
+import android.view.MenuItem;
 
 
 
 
 public class MathSolver extends AppCompatActivity {
 
+    String variable;
+    String equation;
 
     TextView textView;
-    private Button clear, delete, variable, divide, add, subtract, multiply, equal, rightBracket, leftBracket, minusValue;
+    private Button clear, delete, variablex, divide, add, subtract, multiply, equal, rightBracket, leftBracket, minusValue;
     private  Button one, two, three, four, five, six, seven, eight, nine, point, zero ;
     private String ans ="";
     ArrayList<Integer> a = new ArrayList<Integer>();
@@ -43,7 +47,7 @@ public class MathSolver extends AppCompatActivity {
 
         clear = (Button)findViewById(R.id.buttonClearText);
         delete = (Button)findViewById(R.id.buttonDelete);
-        variable = (Button)findViewById(R.id.buttonPercentage);
+        variablex = (Button)findViewById(R.id.buttonPercentage);
         divide = (Button)findViewById(R.id.buttonDivide);
         add = (Button)findViewById(R.id.buttonAdd);
         subtract = (Button)findViewById(R.id.buttonSubtraction);
@@ -131,20 +135,16 @@ public class MathSolver extends AppCompatActivity {
 
         });
 
-
         six.setOnClickListener(new View.OnClickListener() {
 
             @Override
 
             public void onClick(View view) {
                 ans+="6";
-
                 textView.setText(textView.getText() + "6");
-
             }
 
         });
-
 
         seven.setOnClickListener(new View.OnClickListener() {
 
@@ -152,9 +152,7 @@ public class MathSolver extends AppCompatActivity {
 
             public void onClick(View view) {
                 ans+="7";
-
                 textView.setText(textView.getText() + "7");
-
             }
 
         });
@@ -165,9 +163,7 @@ public class MathSolver extends AppCompatActivity {
 
             public void onClick(View view) {
                 ans+="8";
-
                 textView.setText(textView.getText() + "8");
-
             }
 
         });
@@ -178,9 +174,7 @@ public class MathSolver extends AppCompatActivity {
 
             public void onClick(View view) {
                 ans+="9";
-
                 textView.setText(textView.getText() + "9");
-
             }
 
         });
@@ -193,7 +187,6 @@ public class MathSolver extends AppCompatActivity {
             public void onClick(View view) {
                 //This code block will run when the textView is not empty
                 if(!textView.getText().toString().isEmpty())
-
                 //only if the textView doesn't end with a '+', '-' , '*', '(',')' , '=' or '.', the user can tap the point button.
                 {
                     String s = textView.getText().toString();
@@ -203,10 +196,7 @@ public class MathSolver extends AppCompatActivity {
                         ans+=".";
                         textView.setText(textView.getText() + ".");
                     }
-
                 }
-
-
             }
 
         });
@@ -217,13 +207,10 @@ public class MathSolver extends AppCompatActivity {
 
             public void onClick(View view) {
                 ans+="0";
-
                 textView.setText(textView.getText() + "0");
-
             }
 
         });
-
 
         clear.setOnClickListener(new View.OnClickListener()
 
@@ -262,35 +249,23 @@ public class MathSolver extends AppCompatActivity {
                     ans=s1;
                     textView.setText(s1);
                 }
-
             }
 
         });
         /*
         //button to multiply the textView with -1
         minusValue.setOnClickListener(new View.OnClickListener() {
-
             @Override
-
             public void onClick(View view) {
-
                 String s = textView.getText().toString();
-
                 double res = Double.parseDouble(s + "");
-
                 res*=-1;
-
                 ans=String.valueOf(res);
-
                 textView.setText(res + "");
-
             }
-
         });
         */
-
-
-        variable.setOnClickListener(new View.OnClickListener() {
+        variablex.setOnClickListener(new View.OnClickListener() {
 
             @Override
 
@@ -306,8 +281,6 @@ public class MathSolver extends AppCompatActivity {
                         ans+="X";
                         textView.setText(textView.getText() + "X");
                     }
-
-
                 }
             }
 
@@ -315,33 +288,19 @@ public class MathSolver extends AppCompatActivity {
 
         /*
         divide.setOnClickListener(new View.OnClickListener() {
-
             @Override
-
             public void onClick(View v) {
-
                 if(!textView.getText().toString().isEmpty())
-
                 {
-
                     String s = textView.getText().toString();
-
                     char ch=s.charAt(s.length()-1);
-
                     if(ch!='+' && ch!='-'  && ch!='*' && ch!='/' && ch!='.') {
-
                         a.add(s.length()-1);
-
                         ans+="/";
-
                         textView.setText(textView.getText() + "/");
-
                     }
-
                 }
-
             }
-
         });
         */
 
@@ -441,7 +400,6 @@ public class MathSolver extends AppCompatActivity {
                         ans+="*";
                         textView.setText(textView.getText() + "(");
                     }
-
                 }
                 else{
                     ans+="(";
@@ -469,4 +427,17 @@ public class MathSolver extends AppCompatActivity {
 
         });
     }
+
+    @Override
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        // Inflate the menu; this adds items to the action bar if it is present.
+
+        getMenuInflater().inflate(R.menu.main, menu);
+
+        return true;
+
+    }
+
 }
