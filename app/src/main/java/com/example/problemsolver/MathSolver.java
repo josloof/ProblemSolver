@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
@@ -637,8 +639,18 @@ public class MathSolver extends AppCompatActivity {
     public void solve() {
         LinearLayout wrapper = findViewById(R.id.wrapper);
         TextView errorTextView = findViewById(R.id.error);
+        TableRow row1 =findViewById(R.id.row1);
+        TableRow row2 =findViewById(R.id.row2);
+        TableRow row3 =findViewById(R.id.row3);
+        TableRow row4 =findViewById(R.id.row4);
+        TableRow row5 =findViewById(R.id.row5);
         wrapper.removeAllViews();
         errorTextView.setText("");
+        //row1.removeAllViews();
+        //row2.removeAllViews();
+        //row3.removeAllViews();
+        //row4.removeAllViews();
+        //row5.removeAllViews();
 
         Integer nextStep = 1;
         TextView equationTextView = findViewById(R.id.textView);

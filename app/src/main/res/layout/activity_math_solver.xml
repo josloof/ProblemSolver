@@ -60,6 +60,7 @@
     <!--     Row 2 Starts From Here -->
 
     <TableRow
+        android:id="@+id/row1"
         android:layout_width="fill_parent"
         android:layout_height="100dp"
         android:layout_weight="1"
@@ -117,6 +118,7 @@
 
     <!--     Row 3 Starts From Here -->
     <TableRow
+        android:id="@+id/row2"
         android:layout_width="fill_parent"
         android:layout_height="84dp"
         android:layout_weight="1"
@@ -178,6 +180,7 @@
 
     <!--     Row 4 Starts From Here -->
     <TableRow
+        android:id="@+id/row3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -232,13 +235,13 @@
             android:text="-"
             android:textColor="#FFFFFF"
             android:textSize="35dp"
-            android:typeface="monospace"
-            />
+            android:typeface="monospace" />
 
     </TableRow>
 
     <!--     Row 5 Starts From Here -->
     <TableRow
+        android:id="@+id/row4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -282,6 +285,7 @@
             android:textColor="#FFFFFF"
             android:textSize="35dp"
             android:typeface="monospace" />
+
         <Button
             android:id="@+id/buttonLeftBracket"
             android:layout_width="wrap_content"
@@ -299,6 +303,7 @@
 
     <!--     Row 6 Starts From Here -->
     <TableRow
+        android:id="@+id/row5"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -341,8 +346,7 @@
             android:text="="
             android:textColor="#FFFFFF"
             android:textSize="35dp"
-            android:typeface="monospace"
-            />
+            android:typeface="monospace" />
 
         <Button
             android:id="@+id/buttonRightBracket"
