@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ProblemSolver</string>
+    <string name="equation_hint">Enter a linear equation e.g 2x + 9= 8</string>
     <string name="accepted_values">0123456789()+-= X</string>
 </resources>
