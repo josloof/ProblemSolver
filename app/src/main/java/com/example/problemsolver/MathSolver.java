@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -637,7 +638,8 @@ public class MathSolver extends AppCompatActivity {
 
 
     public void solve() {
-        LinearLayout wrapper = findViewById(R.id.wrapper);
+        //LinearLayout wrapper = findViewById(R.id.wrapper);
+        ScrollView wrapper = findViewById(R.id.wrapper);
         TextView errorTextView = findViewById(R.id.error);
         TableRow row1 =findViewById(R.id.row1);
         TableRow row2 =findViewById(R.id.row2);
@@ -646,11 +648,11 @@ public class MathSolver extends AppCompatActivity {
         TableRow row5 =findViewById(R.id.row5);
         wrapper.removeAllViews();
         errorTextView.setText("");
-        row1.setVisibility(View.INVISIBLE);
-        row2.setVisibility(View.INVISIBLE);
-        row3.setVisibility(View.INVISIBLE);
-        row4.setVisibility(View.INVISIBLE);
-        row5.setVisibility(View.INVISIBLE);
+        //row1.setVisibility(View.INVISIBLE);
+        //row2.setVisibility(View.INVISIBLE);
+        //row3.setVisibility(View.INVISIBLE);
+        //row4.setVisibility(View.INVISIBLE);
+        //row5.setVisibility(View.INVISIBLE);
         //row1.removeAllViews();
         //row2.removeAllViews();
         //row3.removeAllViews();
@@ -735,22 +737,25 @@ public class MathSolver extends AppCompatActivity {
     public void displaySteps(String solution, String step, String content) {
         int textColor = Integer.parseInt("000000", 16)+0xFF000000;
 
-        LinearLayout wrapper = findViewById(R.id.wrapper);
+        ScrollView wrapper = findViewById(R.id.wrapper);
         // wrapper.removeAllViews();
+        //ScrollView scrollView = new ScrollView(this);
         LinearLayout linearLayout = new LinearLayout(this);
         TextView stepTextView = new TextView(this);
         TextView stepContentTextView = new TextView(this);
         TextView solutionTextView = new TextView(this);
 
-        LinearLayout.LayoutParams linearLayouParams = new LinearLayout
-                .LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        LinearLayout.LayoutParams textParams = new LinearLayout
-                .LayoutParams( ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        //ScrollView.LayoutParams scrollViewParams = new ScrollView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams( ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        //LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        //LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 
-        LinearLayout.LayoutParams solutionTextParams = new LinearLayout
-                .LayoutParams( ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams solutionTextParams = new LinearLayout.LayoutParams( ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        //LinearLayout.LayoutParams solutionTextParams = new LinearLayout.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+
         solutionTextParams.setMargins(40, 18, 0, 0);
-        linearLayouParams.setMargins(40, 20, 0, 0);
+        linearLayoutParams.setMargins(40, 20, 0, 0);
 
         stepTextView.setLayoutParams(textParams);
         stepTextView.setText(step);
@@ -772,13 +777,19 @@ public class MathSolver extends AppCompatActivity {
         solutionTextView.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
         solutionTextView.setTextColor(textColor);
 
-        linearLayout.setLayoutParams(linearLayouParams);
+        //scrollView.setLayoutParams(scrollViewParams);
+
+
+        linearLayout.setLayoutParams(linearLayoutParams);
+        //linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
         linearLayout.addView(stepTextView);
         linearLayout.addView(stepContentTextView);
+        //linearLayout.addView(solutionTextView);
         wrapper.addView(linearLayout);
-        wrapper.addView(solutionTextView);
+        //wrapper.addView(solutionTextView);
 
+        //scrollView.addView(wrapper);
     }
 
     /**
