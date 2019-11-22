@@ -646,6 +646,11 @@ public class MathSolver extends AppCompatActivity {
         TableRow row5 =findViewById(R.id.row5);
         wrapper.removeAllViews();
         errorTextView.setText("");
+        row1.setVisibility(View.INVISIBLE);
+        row2.setVisibility(View.INVISIBLE);
+        row3.setVisibility(View.INVISIBLE);
+        row4.setVisibility(View.INVISIBLE);
+        row5.setVisibility(View.INVISIBLE);
         //row1.removeAllViews();
         //row2.removeAllViews();
         //row3.removeAllViews();
