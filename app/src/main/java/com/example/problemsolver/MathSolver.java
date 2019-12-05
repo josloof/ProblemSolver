@@ -88,8 +88,20 @@ public class MathSolver extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                ans+="1";
-                textView.setText(textView.getText() + "1");
+                if(!textView.getText().toString().isEmpty())
+                {
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
+                    if(ch!='X')
+                    {
+                        ans+=".";
+                        textView.setText(textView.getText() + "1");
+                    }
+                }
+                else{
+                    ans+=".";
+                    textView.setText(textView.getText() + "1");
+                }
 
             }
 
@@ -100,10 +112,20 @@ public class MathSolver extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                ans+="2";
-
-                textView.setText(textView.getText() + "2");
-
+                if(!textView.getText().toString().isEmpty())
+                {
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
+                    if(ch!='X')
+                    {
+                        ans+=".";
+                        textView.setText(textView.getText() + "2");
+                    }
+                }
+                else{
+                    ans+=".";
+                    textView.setText(textView.getText() + "2");
+                }
             }
 
         });
@@ -113,9 +135,20 @@ public class MathSolver extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                ans+="3";
-
-                textView.setText(textView.getText() + "3");
+                if(!textView.getText().toString().isEmpty())
+                {
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
+                    if(ch!='X')
+                    {
+                        ans+=".";
+                        textView.setText(textView.getText() + "3");
+                    }
+                }
+                else{
+                    ans+=".";
+                    textView.setText(textView.getText() + "3");
+                }
 
             }
 
@@ -126,9 +159,20 @@ public class MathSolver extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                ans+="4";
-
-                textView.setText(textView.getText() + "4");
+                if(!textView.getText().toString().isEmpty())
+                {
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
+                    if(ch!='X')
+                    {
+                        ans+=".";
+                        textView.setText(textView.getText() + "4");
+                    }
+                }
+                else{
+                    ans+=".";
+                    textView.setText(textView.getText() + "4");
+                }
 
             }
 
@@ -139,9 +183,20 @@ public class MathSolver extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                ans+="5";
-
-                textView.setText(textView.getText() + "5");
+                if(!textView.getText().toString().isEmpty())
+                {
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
+                    if(ch!='X')
+                    {
+                        ans+=".";
+                        textView.setText(textView.getText() + "5");
+                    }
+                }
+                else{
+                    ans+=".";
+                    textView.setText(textView.getText() + "5");
+                }
 
             }
 
@@ -152,8 +207,20 @@ public class MathSolver extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                ans+="6";
-                textView.setText(textView.getText() + "6");
+                if(!textView.getText().toString().isEmpty())
+                {
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
+                    if(ch!='X')
+                    {
+                        ans+=".";
+                        textView.setText(textView.getText() + "6");
+                    }
+                }
+                else{
+                    ans+=".";
+                    textView.setText(textView.getText() + "6");
+                }
             }
 
         });
@@ -163,8 +230,20 @@ public class MathSolver extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                ans+="7";
-                textView.setText(textView.getText() + "7");
+                if(!textView.getText().toString().isEmpty())
+                {
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
+                    if(ch!='X')
+                    {
+                        ans+=".";
+                        textView.setText(textView.getText() + "7");
+                    }
+                }
+                else{
+                    ans+=".";
+                    textView.setText(textView.getText() + "7");
+                }
             }
 
         });
@@ -174,8 +253,20 @@ public class MathSolver extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                ans+="8";
-                textView.setText(textView.getText() + "8");
+                if(!textView.getText().toString().isEmpty())
+                {
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
+                    if(ch!='X')
+                    {
+                        ans+=".";
+                        textView.setText(textView.getText() + "8");
+                    }
+                }
+                else{
+                    ans+=".";
+                    textView.setText(textView.getText() + "8");
+                }
             }
 
         });
@@ -185,8 +276,20 @@ public class MathSolver extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                ans+="9";
-                textView.setText(textView.getText() + "9");
+                if(!textView.getText().toString().isEmpty())
+                {
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
+                    if(ch!='X')
+                    {
+                        ans+=".";
+                        textView.setText(textView.getText() + "9");
+                    }
+                }
+                else{
+                    ans+=".";
+                    textView.setText(textView.getText() + "9");
+                }
             }
 
         });
@@ -203,7 +306,7 @@ public class MathSolver extends AppCompatActivity {
                 {
                     String s = textView.getText().toString();
                     char ch=s.charAt(s.length()-1);
-                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='(' && ch!=')'&& ch!='.'&& ch!='=')
+                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='(' && ch!=')'&& ch!='.'&& ch!='='&& ch!='X')
                     {
                         ans+=".";
                         textView.setText(textView.getText() + ".");
@@ -218,8 +321,21 @@ public class MathSolver extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                ans+="0";
-                textView.setText(textView.getText() + "0");
+                if(!textView.getText().toString().isEmpty())
+                {
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
+                    if(ch!='X')
+                    {
+                        ans+=".";
+                        textView.setText(textView.getText() + "0");
+                    }
+                }
+                else{
+                    ans+=".";
+                    textView.setText(textView.getText() + "0");
+                }
+
             }
 
         });
@@ -286,6 +402,21 @@ public class MathSolver extends AppCompatActivity {
                 {
                     String s = textView.getText().toString();
                     char ch=s.charAt(s.length()-1);
+                    if( ch!='*' && ch!='.'&& ch!='X')
+                    {
+                        ans+="X";
+                        textView.setText(textView.getText() + "X");
+                    }
+                }
+                else{
+                    ans+="X";
+                    textView.setText(textView.getText() + "X");
+                }
+                /*
+                //if(!textView.getText().toString().isEmpty())
+                //{
+                    String s = textView.getText().toString();
+                    char ch=s.charAt(s.length()-1);
                     //only if the textView doesn't end with a  '*', 'X'or '.', the user can tap the variable button.
                     if( ch!='*' && ch!='.'&& ch!='X')
                     {
@@ -293,7 +424,8 @@ public class MathSolver extends AppCompatActivity {
                         ans+="X";
                         textView.setText(textView.getText() + "X");
                     }
-                }
+                //}
+                 */
             }
 
         });
@@ -407,7 +539,7 @@ public class MathSolver extends AppCompatActivity {
                 {
                     String s = textView.getText().toString();
                     char ch=s.charAt(s.length()-1);
-                    if(ch!='.'&& ch!='(') {
+                    if(ch!='.'&& ch!='('&& ch!=')') {
                         a.add(s.length()-1);
                         ans+="*";
                         textView.setText(textView.getText() + "(");
@@ -945,7 +1077,7 @@ public class MathSolver extends AppCompatActivity {
             if(k != equation.length() -1){
                 if(Character.isLetter(equation.charAt(k)) && Character.isDigit(equation.charAt(k+1)))
                 {
-                    textView.setText("Invalid equation! You are expected to input either \"+\" or \"-\"  sign after " +  equation.charAt(k) + " but you input " + equation.charAt(k+1) + " which is a number");
+                    textView.setText("Invalid equation! You are expected to put either a \"+\" or \"-\"  sign in after " +  equation.charAt(k) + " but you put " + equation.charAt(k+1) + " in which is a number");
                     return false;
                 }
             }
@@ -953,7 +1085,7 @@ public class MathSolver extends AppCompatActivity {
                 sign = "" + equation.charAt(k);
                 if(k != equation.length() -1){
                     if(equation.charAt(k+1) == '(' || equation.charAt(k+1) == ')'){
-                        textView.setText("Invalid equation! You cant have two or more " + sign + " together");
+                        textView.setText("Invalid equation! You cannot have two or more " + sign + " together");
                         return false;
                     }
                 }
@@ -975,7 +1107,7 @@ public class MathSolver extends AppCompatActivity {
 
         }
         if(ovar == 1){
-            textView.setText("Invalid equation! You didnt close a bracket you opened.");
+            textView.setText("Invalid equation! You did not close a bracket you opened.");
             return false;
         }
         String hold = "";
@@ -1003,6 +1135,7 @@ public class MathSolver extends AppCompatActivity {
                     hold = hold + equation.charAt(k);
                     k +=1;
                 }
+
                 for(int q = 0; q  < num.length(); q++){
                     if(Character.isLetter(num.charAt(q))){
                         textView.setText("Invalid equation! You are not allowed to open a bracket with a variable");
