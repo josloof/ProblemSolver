@@ -572,9 +572,11 @@ public class MathSolver extends AppCompatActivity {
         else if(variable.length() == 2 && variable.charAt(0) == '-') return -1;
 
         for(int i = 0; i < variable.length(); i++){
-            if(Character.isDigit(variable.charAt(i)))coefficient+=variable.charAt(i);
+            if(Character.isDigit(variable.charAt(i)))
+                coefficient+=variable.charAt(i);
         }
-        if(variable.charAt(0) == '-')return Integer.parseInt("-" + coefficient);
+        if(variable.charAt(0) == '-')
+            return Integer.parseInt("-" + coefficient);
         return Integer.parseInt(coefficient);
     }
 
@@ -663,7 +665,7 @@ public class MathSolver extends AppCompatActivity {
         if (!isValidEquation()) {
             return;
         }
-        displaySteps(equation, "Step" + nextStep.toString() + ": ", "Write down the equation");
+        displaySteps(equation, "Step " + nextStep.toString() + ": ", "Write down the equation");
         nextStep +=1;
 
         String[] divEquation = equation.split("=");
@@ -677,7 +679,7 @@ public class MathSolver extends AppCompatActivity {
             if (containsBracket(leftHandSide)) leftHandSideComps = openBracket(leftHandSideComps);
             if (containsBracket(rightHandSide)) rightHandSideComps = openBracket(rightHandSideComps);
 
-            displaySteps(getSolution(leftHandSideComps, rightHandSideComps), "Step" + nextStep.toString() + ": ", "Open bracket");
+            displaySteps(getSolution(leftHandSideComps, rightHandSideComps), "Step " + nextStep.toString() + ": ", "Open bracket");
             nextStep +=1;
         }
 
@@ -686,24 +688,24 @@ public class MathSolver extends AppCompatActivity {
         leftHandSideComps = likeTerms[0]; // Now holds the variables.
         rightHandSideComps = likeTerms[1]; // Now holds the constants.
 
-        displaySteps(getSolution(leftHandSideComps, rightHandSideComps), "Step" + nextStep.toString() + ": ", "Collect like terms");
+        displaySteps(getSolution(leftHandSideComps, rightHandSideComps), "Step " + nextStep.toString() + ": ", "Collect like terms");
         nextStep +=1;
 
         String variableSum = simplifyExpression(leftHandSideComps);
         String constantSum = simplifyConstants(rightHandSideComps);
+
+
+        displaySteps(variableSum + " = " + constantSum, "Step " + nextStep.toString() + ": ", "Simplify both side of the equation");
+
         Integer coef = getCoefficient(variableSum);
-
-        displaySteps(variableSum + " = " + constantSum, "Step" + nextStep.toString() + ": ", "Simplify both side of the equation");
-
-
         if (variableSum.equals(variable)) {
-            displaySteps("Therefore " + variable + " = " + constantSum, "Step" + nextStep.toString() + ": ", "Write down the final answer");
+            displaySteps("Therefore " + variable + " = " + constantSum, "Step " + nextStep.toString() + ": ", "Write down the final answer");
             return;
         }
 
         if (coef == -1) {
             constantSum = Integer.toString(Integer.parseInt(constantSum) * -1);
-            displaySteps(variable + " = " + constantSum, "Step" + nextStep.toString() + ": ", "Multiply through by -1");
+            displaySteps(variable + " = " + constantSum, "Step " + nextStep.toString() + ": ", "Multiply by -1");
             nextStep +=1;
             displaySteps("Therefore " + variable + " = " + constantSum, "Step" + nextStep.toString() + ": ", "Write down the final answer");
             return;
@@ -712,14 +714,14 @@ public class MathSolver extends AppCompatActivity {
 
         DecimalFormat df = new DecimalFormat("0.00");
 
-        displaySteps(variableSum + "/" + coef.toString() + " = " + constantSum + "/" + coef.toString(), "Step" + nextStep.toString() + ": ", "Divide both side of the equation by " + coef.toString());
+        displaySteps(variableSum + "/" + coef.toString() + " = " + constantSum + " /"+ coef.toString(), "Step " + nextStep.toString() + ": ", "Divide both sides of the equation by " + coef.toString());
 
         if (coef == 0) {
-            displaySteps("Therefore " + variable + " = " + "NAN or undefined", "Step" + nextStep.toString() + ": ", "Write down the final answer");
+            displaySteps("Therefore " + variable + " = " + "NAN or undefined", "Step " + nextStep.toString() + ": ", "Write down the final answer");
             return;
         }
 
-        displaySteps("Therefore " + variable + " = " + df.format(constant), "Step" + nextStep.toString() + ": ", "Write down the final answer");
+        displaySteps("Therefore " + variable + " = " + df.format(constant), "Step " + nextStep.toString() + ": ", "Write down the final answer");
     }
 
     /**
@@ -872,7 +874,7 @@ public class MathSolver extends AppCompatActivity {
 
 
         if(equation.length() == 0){
-            textView.setText("You did not input anything!");
+            textView.setText("You did not put in anything!");
             return false;
         }
 
