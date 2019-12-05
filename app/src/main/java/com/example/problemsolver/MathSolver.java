@@ -828,7 +828,7 @@ public class MathSolver extends AppCompatActivity {
 
 
         displaySteps(variableSum + " = " + constantSum, "Step " + nextStep.toString() + ": ", "Simplify both side of the equation");
-
+        nextStep +=1;
         Integer coef = getCoefficient(variableSum);
         if (variableSum.equals(variable)) {
             displaySteps("Therefore " + variable + " = " + constantSum, "Step " + nextStep.toString() + ": ", "Write down the final answer");
@@ -847,7 +847,7 @@ public class MathSolver extends AppCompatActivity {
         DecimalFormat df = new DecimalFormat("0.00");
 
         displaySteps(variableSum + "/" + coef.toString() + " = " + constantSum + " /"+ coef.toString(), "Step " + nextStep.toString() + ": ", "Divide both sides of the equation by " + coef.toString());
-
+        nextStep +=1;
         if (coef == 0) {
             displaySteps("Therefore " + variable + " = " + "NAN or undefined", "Step " + nextStep.toString() + ": ", "Write down the final answer");
             return;
@@ -907,7 +907,6 @@ public class MathSolver extends AppCompatActivity {
         solutionTextView.setTextColor(textColor);
 
         //scrollView.setLayoutParams(scrollViewParams);
-
 
         linearLayout.setLayoutParams(linearLayoutParams);
         //linearLayout.setOrientation(LinearLayout.VERTICAL);
