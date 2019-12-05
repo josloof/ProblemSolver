@@ -638,8 +638,7 @@ public class MathSolver extends AppCompatActivity {
 
 
     public void solve() {
-        //LinearLayout wrapper = findViewById(R.id.wrapper);
-        ScrollView wrapper = findViewById(R.id.wrapper);
+        LinearLayout wrapper = findViewById(R.id.wrapper);
         TextView errorTextView = findViewById(R.id.error);
         TableRow row1 =findViewById(R.id.row1);
         TableRow row2 =findViewById(R.id.row2);
@@ -647,17 +646,13 @@ public class MathSolver extends AppCompatActivity {
         TableRow row4 =findViewById(R.id.row4);
         TableRow row5 =findViewById(R.id.row5);
         wrapper.removeAllViews();
-        errorTextView.setText("");
-        //row1.setVisibility(View.INVISIBLE);
-        //row2.setVisibility(View.INVISIBLE);
-        //row3.setVisibility(View.INVISIBLE);
-        //row4.setVisibility(View.INVISIBLE);
-        //row5.setVisibility(View.INVISIBLE);
         //row1.removeAllViews();
         //row2.removeAllViews();
         //row3.removeAllViews();
         //row4.removeAllViews();
         //row5.removeAllViews();
+        errorTextView.setText("");
+
 
         Integer nextStep = 1;
         TextView equationTextView = findViewById(R.id.textView);
@@ -737,7 +732,7 @@ public class MathSolver extends AppCompatActivity {
     public void displaySteps(String solution, String step, String content) {
         int textColor = Integer.parseInt("000000", 16)+0xFF000000;
 
-        ScrollView wrapper = findViewById(R.id.wrapper);
+        LinearLayout wrapper = findViewById(R.id.wrapper);
         // wrapper.removeAllViews();
         //ScrollView scrollView = new ScrollView(this);
         LinearLayout linearLayout = new LinearLayout(this);
@@ -787,7 +782,7 @@ public class MathSolver extends AppCompatActivity {
         linearLayout.addView(stepContentTextView);
         //linearLayout.addView(solutionTextView);
         wrapper.addView(linearLayout);
-        //wrapper.addView(solutionTextView);
+        wrapper.addView(solutionTextView);
 
         //scrollView.addView(wrapper);
     }

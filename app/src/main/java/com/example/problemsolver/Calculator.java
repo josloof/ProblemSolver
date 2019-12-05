@@ -674,7 +674,7 @@ public class Calculator extends AppCompatActivity {
 
                             {
 
-                                res=(res)*(answ)/10000;
+                                res=(res)*(answ)/100;
 
                             }
 

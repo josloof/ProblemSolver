@@ -14,7 +14,7 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="314dp"
+        android:layout_height="485dp"
         android:layout_weight="5"
         android:background="#FFFFFF"
         android:gravity="center_horizontal"
@@ -34,14 +34,13 @@
             android:paddingLeft="10dp"
             android:textSize="17sp" />
 
-        <ScrollView
+        <LinearLayout
             android:id="@+id/wrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
-            android:scrollbars="vertical"
-            ></ScrollView>
+            android:scrollbars="vertical"></LinearLayout>
 
         <TextView
             android:id="@+id/error"
