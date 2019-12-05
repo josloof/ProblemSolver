@@ -429,7 +429,7 @@ public class MathSolver extends AppCompatActivity {
                 {
                     String s = textView.getText().toString();
                     char ch=s.charAt(s.length()-1);
-                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='(' && ch!='.'&& ch!='=') {
+                    if(ch!='+' && ch!='-'  && ch!='*' && ch!='('&& ch!=')' && ch!='.'&& ch!='=') {
                         a.add(s.length()-1);
                         ans+="*";
                         textView.setText(textView.getText() + ")");
@@ -919,18 +919,18 @@ public class MathSolver extends AppCompatActivity {
         //checking if the equation ends with either + or - Or two or more signs come together
         for(int k = 0; k < equation.length(); k++) {
             if((equation.charAt(0) == '+' && equation.charAt(1) == '=') || (equation.charAt(0) == '-' && equation.charAt(1) == '=')){
-                System.out.println("Invalid equation! It is wrong to have only " + equation.charAt(0) + " in the left hand side of the equation");
-                return true;
+                textView.setText("Invalid equation! It is wrong to have only " + equation.charAt(0) + " in the left hand side of the equation");
+                return false;
             }
             if (equation.charAt(k) == '-' || equation.charAt(k) == '+'){
                 sign = "" + equation.charAt(k);
                 if(k == equation.length() -1){
-                    System.out.println("Invalid equation! You can not end an equation with " + sign);
-                    return true;
+                    textView.setText("Invalid equation! You can not end an equation with " + sign);
+                    return false;
                 }
                 else if(equation.charAt(k+1) == '+' || equation.charAt(k+1) == '-'){
                     textView.setText("Invalid equation! Two or more signs(e.g +, -) can not be together ");
-                    return true;
+                    return false;
                 }
             }
             if(Character.isLetter(equation.charAt(k))){
