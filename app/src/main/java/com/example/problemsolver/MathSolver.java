@@ -489,7 +489,7 @@ public class MathSolver extends AppCompatActivity {
             }
 
         });
-
+        /*
         multiply.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -509,7 +509,7 @@ public class MathSolver extends AppCompatActivity {
             }
 
         });
-
+        */
         equal.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -722,7 +722,7 @@ public class MathSolver extends AppCompatActivity {
     }
 
     /**
-     * It Collect like terms.
+     * Collects like terms.
      *
      * @param leftHandSide The left hand side of the equation
      * @param rightHandSide The right hand side of the equation

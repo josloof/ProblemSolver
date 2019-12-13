@@ -407,16 +407,18 @@ public class Calculator extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
+                if(!textView.getText().toString().isEmpty()){
+                    String s = textView.getText().toString();
 
-                String s = textView.getText().toString();
+                    double res = Double.parseDouble(s + "");
 
-                double res = Double.parseDouble(s + "");
+                    res*=-1;
 
-                res*=-1;
+                    ans=String.valueOf(res);
 
-                ans=String.valueOf(res);
+                    textView.setText(res + "");
 
-                textView.setText(res + "");
+                }
 
             }
 
